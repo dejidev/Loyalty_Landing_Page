@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Satochi';
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mid-grad {
+  /* margin-top: 50px;
+  width: 100px;
+  height: 100px;
+background: linear-gradient(0deg, #A75FD2, #A75FD2),
+linear-gradient(0deg, #FCFCFC, #FCFCFC),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+; */
+  position: absolute;
+  /* opacity: 70; */
+  left: 50%;
+  /* top: 60px; */
+  transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mid{
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 25%
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+nav span {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 62px;
 }
 
-.App-link {
-  color: #61dafb;
+nav button {
+   border-color: linear-gradient(92.7deg, #5404FF 7.9%, #BA2AD1 88.1%); 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.grad1 {  
+  width: 100px;
+  height: 100px;
+  left: 2%;
+  right: 0%;
+  top: 25%;
+  bottom: 0%;
+  box-shadow: inset 2px 4px 100px #001D6E;
+}
+
+.grad2{
+  width: 250px;
+  height: 250px;
+  right: -7%;
+  top: 40%;
+  bottom: 0%;
+  box-shadow: inset 4px 8px 200px #001D6E;
+  filter: blur(15px);
+}
+
+.grad3{
+  width: 50px;
+  height: 50px;
+  left: 70%;
+  right: 0%;
+  top: 10%;
+  bottom: 0%;
+}
+
+@media screen and (max-width: 700px) {
+.grad1 {  
+  width: 60px;
+  height: 60px;
+  left: -7%;
+  right: 0%;
+  top: 18%;
+  bottom: 0%;
+  box-shadow: inset 2px 4px 100px #001D6E;
+}
+
+.grad2{
+  width: 200px;
+  height: 200px;
+  right: -45%;
+  top: 40%;
+  bottom: 0%;
+  box-shadow: inset 4px 8px 200px #001D6E;
+  filter: blur(15px);
+}
+
+.grad3{
+  width: 40px;
+  height: 40px;
+  left: 70%;
+  right: 0%;
+  top: 9%;
+  bottom: 0%;
+}
 }
