@@ -1,0 +1,31 @@
+textarea {
+    padding: 5px 15px 5px 15px;
+    font-size: 18px;
+    line-height: 30px;
+    display: block;
+    width: 100%;
+    border: 0.3px solid #FCFCFC;
+}
+
+select {
+    padding: 5px 20px 5px 15px;
+    color: #FCFCFC;
+    font-size: 18px;
+    line-height: 30px;
+    display: block;
+    width: 100%;
+    border: 0.3px solid #FCFCFC;
+
+}
+
+input {
+    padding: 5px 10px 5px 15px;
+   
+}
+
+.pos{
+    left: 5%;
+    position: absolute;
+    top: 200px;
+    transform: translate(-50%, -50%);
+}

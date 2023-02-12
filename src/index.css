@@ -20,8 +20,10 @@
        font-style: normal;
 }  */
 
-.satochi {
+/* .satochi {
   font-family: 'Satochi';
+} */
+
+*{
+  font-family: sans-serif;
 }
-
-

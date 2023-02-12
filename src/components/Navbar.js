@@ -5,7 +5,7 @@ import vectorlogo from "../assests/Vectorlogo.png";
 const Navbar = () => {
   return (
     <nav className="flex justify-between items-center pt-4 md:pt-8">
-      <div className="text-white flex items-center md:text-5xl text-3xl">
+      <div className="text-white flex items-center md:text-5xl text-2xl">
         <span>I</span>
         <span className="relative">
           <img src={logo} alt="love" className="" />
@@ -14,8 +14,8 @@ const Navbar = () => {
         <span>yalbaze</span>
       </div>
       <div>
-        <button className="text-white border px-4 py-2 rounded-full text-base ">
-          Request a call
+        <button className="text-white border px-2 py-2 rounded-full text-[8px] md:text-sm lg:text:lg ">
+          Get Priority Access
         </button>
       </div>
     </nav>
