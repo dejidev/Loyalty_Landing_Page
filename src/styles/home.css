@@ -64,5 +64,11 @@ input {
 
 .arr {
     position: absolute;
-    right : 25%;
+    right : 22%;
+}
+
+@media screen and (max-width: 1024px) {
+    .arr {
+        display: none;
+    }
 }

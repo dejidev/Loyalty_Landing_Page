@@ -28,8 +28,8 @@ nav span {
   line-height: 62px;
 }
 
-nav button {
-  border-color: linear-gradient(92.7deg, #5404FF 7.9%, #BA2AD1 88.1%); 
+.gr {
+  background: linear-gradient(92.7deg, #5404FF 7.9%, #BA2AD1 88.1%); 
 }
 
 .ball {
@@ -62,81 +62,53 @@ nav button {
   top: 50px;
 }
 
-.star1{
-  width: 24px;
-  left: 16%;
-  top: 150px;
+@media screen and (max-width: 900px) {
+  .grad3{
+    left: 60%;
+  }
 }
 
-.star2{
-  width: 36px;
-  right: 9%;
-  top: 300px;
-}
-
-.star3{
-  width: 48px;
-  left: 10%;
-  top: 700px;
-}
-
-.star4{
-  width: 36px;
-  right: 55%;
-  top: 950px;
-}
-
-.star5{
-  width: 24px;
-  right: 13%;
-  bottom: 150px;
-}
-
-.star6{
-  width: 36px;
-  bottom:200px;
-}
 
 @media screen and (max-width: 770px) {
-.grad1 {  
-  width: 60px;
-  height: 60px;
-  left: -3%;
-  top: 500px;
-  box-shadow: inset 2px 4px 100px #001D6E;
-}
+  .grad1 {  
+    width: 60px;
+    height: 60px;
+    left: -3%;
+    top: 500px;
+    box-shadow: inset 2px 4px 100px #001D6E;
+  }
 
-.grad2{
-  width: 200px;
-  height: 200px;
-  right: -10%;
-  top: 550px;
+  .grad2{
+    width: 200px;
+    height: 200px;
+    right: -10%;
+    top: 550px;
 
-}
+  }
 
-.grad3{
-  width: 40px;
-  height: 40px;
-  left: 70%;
-  top: 60px;
-  bottom: 0%;
-}
+  .grad3{
+    width: 40px;
+    height: 40px;
+    left: 70%;
+    top: 60px;
+    bottom: 0%;
+  }
 
-.star1{
-  width: 24px;
-  left: 6%;
-  top: 150px;
-}
+  .star1{
+    width: 24px;
+    left: 6%;
+    top: 150px;
+  }
 
-.star2{
-  width: 36px;
-  right: 3%;
-  top: 400px;
-}
+  .star2{
+    width: 36px;
+    right: 3%;
+    top: 400px;
+  }
 
-.star3, .star4, .star5 {
-  opacity: .7;
-}
+  .star3, .star4, .star5 {
+    opacity: .7;
+  }
 
 }
 

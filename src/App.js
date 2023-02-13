@@ -8,25 +8,30 @@ import Priority from "./components/Priority";
 import Footer from "./components/Footer";
 import star from "./assests/star.png";
 import Modal from "./components/Modal";
+import "./styles/star.css";
 
 function App() {
   const [modal, setModal] = useState(false);
+
   const inputName = useRef(null);
   const inputEmail = useRef(null);
-  const ref = useRef(null);
-
-  const scroll = () => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-    // console.log(ref.current.value);
+  const scrollTargetRef = useRef(null);
+  console.log(scrollTargetRef);
+  const handleClick = () => {
+    const scrollTarget = scrollTargetRef.current;
+    if (scrollTarget) {
+      scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   const toggleModal = (e) => {
     setModal(!modal);
     e.preventDefault();
     if (inputName.current.value && inputEmail.current.value) {
-      inputName.current.value = "";
-      inputEmail.current.value = "";
+      setModal(!modal);
     }
+    inputName.current.value = "";
+    inputEmail.current.value = "";
   };
 
   useEffect(() => {
@@ -77,10 +82,10 @@ function App() {
           gradients: [
             ["#5404FF", "#BA2AD1"],
             ["#FF445B", "#BA2AD1"],
-            ["#FF445B", "#BA2AD1"],
-            ["#6212DC", "#FF445B"],
             ["#6212DC", "#FF445B"],
             ["#5404FF", "#BA2AD1"],
+            ["#FF445B", "#BA2AD1"],
+            ["#6212DC", "#FF445B"],
           ],
           transitionSpeed: 2000,
         },
@@ -91,11 +96,11 @@ function App() {
   return (
     <div className="bg-[#121B27] min-h-screen relative px-6 md:px-16 overflow-hidden z-10">
       <img src={bg} alt="bg " className="mid-grad mt-64" />
-      <Navbar scroll={scroll} />
+      <Navbar handleClick={handleClick} />
       <canvas className="ball grad2 " id="canvas" />
       <canvas className="ball grad1 " id="logo-canvas" />
       <canvas className="ball grad3 " id="canvass" />
-      <canvas className="ball grad4" id="canvass" />
+
       <img src={star} alt="star" className="absolute star1" />
       <img src={star} alt="star" className="absolute star2" />
       <img src={star} alt="star" className="absolute star3" />
@@ -107,7 +112,7 @@ function App() {
         inputEmail={inputEmail}
         toggleModal={toggleModal}
       />
-      <Priority ref={ref} />
+      <Priority ref={scrollTargetRef} />
       <Footer />
       <Modal modal={modal} toggleModal={toggleModal} />
     </div>

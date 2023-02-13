@@ -7,7 +7,7 @@ import arrow from "../assests/arr.png";
 const Home = ({toggleModal, inputName, inputEmail }) => {
 
   return (
-    <article className="text-center text-[#FCFCFC] satochi">
+    <article className="text-center text-[#FCFCFC]">
       <h1 className=" md:w-2/3 text-4xl md:text-6xl m-auto font-extrabold pt-8 pb-4">
         Turn your best customers into
         <span className="text-[#A75FD2]"> Loyal fans</span>
