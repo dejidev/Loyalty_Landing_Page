@@ -4,7 +4,8 @@ import { FiMail } from "react-icons/fi";
 import "../styles/home.css";
 import arrow from "../assests/arr.png";
 
-const Home = () => {
+const Home = ({toggleModal, inputName, inputEmail }) => {
+
   return (
     <article className="text-center text-[#FCFCFC] satochi">
       <h1 className=" md:w-2/3 text-4xl md:text-6xl m-auto font-extrabold pt-8 pb-4">
@@ -23,11 +24,7 @@ const Home = () => {
       <div className="form-outer">
         <div className="container">
           <form className="form ">
-           <img
-              src={arrow}
-              alt="arrow"
-              className="arr "
-            />
+            <img src={arrow} alt="arrow" className="arr " />
             <div className="form-input ">
               <span className="icon">
                 <BsPersonCircle className="text-[#FCFCFC]" />
@@ -35,6 +32,7 @@ const Home = () => {
               <input
                 type="name"
                 name="name"
+                ref={inputName}
                 placeholder="Tell us your name"
                 className="rounded-lg bg-[#121B27] border-[#FCFCFC] pa"
               />
@@ -46,12 +44,13 @@ const Home = () => {
               <input
                 type="email"
                 name="email"
+                ref={inputEmail}
                 placeholder="Enter your email address"
                 className="rounded-lg bg-[#121B27] border-[#FCFCFC] pa"
               />
             </div>
             <div className="form-input py-2 sub">
-              <button type="submit">Get early access</button>
+              <button type="submit" onClick={toggleModal}>Get early access</button>
             </div>
             <div className="flex items-center justify-center pt-3 mb-20">
               <div className="box bg-[#175CE1] text-center">G</div>

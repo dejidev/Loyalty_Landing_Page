@@ -1,19 +1,22 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import zig from "../assests/zig.png";
 import bg from "../assests/bg.png";
 import "../styles/priority.css";
 
-const Priority = () => {
+const Priority = (ref) => {
   return (
-    <div className="text-[#FCFCFC] lg:flex justify-center items-center py-8 lg:py-12 relative">
+    <div
+      
+      className="text-[#FCFCFC] lg:flex justify-center items-center py-8 lg:py-12 relative"
+    >
       <img src={bg} alt="bg" className="absolute pos " />
       <div className="pb-12 lg:w-1/2">
-        <div className="flex flex-col items-start justify-center">
+        <div className="flex flex-col items-center justify-center">
           <h1 className="text-3xl md:text-6xl ">Priority Access</h1>
           <img src={zig} alt="zig" className="" />
         </div>
 
-        <p className=" md:text-lg lg:pr-4">
+        <p className=" md:text-lg lg:pr-4" >
           Get ready to revolutionize the way you interact with your customers
           and drive sales with Loyalbaze. Skip the waitlist and get exclusive
           priority access to LoyalBaze. Limited slots available. Please tell us
@@ -74,4 +77,4 @@ const Priority = () => {
   );
 };
 
-export default Priority;
+export default forwardRef(Priority);
